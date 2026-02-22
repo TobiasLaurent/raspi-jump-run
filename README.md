@@ -1,44 +1,27 @@
-# RasPi Jump Run
+# Bavarian Mug Run
 
-A lightweight jump-and-run game built with `pygame`, designed to run on a Raspberry Pi.
+Bavarian-themed jump-and-run project targeting Raspberry Pi game simulators.
 
-## Features
-- Single-button jump gameplay
-- Endless obstacle runner with increasing speed
-- Keyboard and basic gamepad support
-- Fullscreen mode for arcade-style setups
+This repository now contains:
+- A fast `pygame` prototype (`/Users/tobiaslaurent/workspace/game/game.py`)
+- A real engine version in Godot (`/Users/tobiaslaurent/workspace/game/godot`)
 
-## Controls
-- `SPACE` / `UP` / `W`: jump, start, restart
-- Gamepad button `A` (button `0`): jump, start, restart
-- `F11`: toggle fullscreen
-- `ESC`: quit
+## Recommended Path
+For long-term development and better game architecture, use the Godot project:
+- `/Users/tobiaslaurent/workspace/game/godot/project.godot`
 
-## Run Locally
+Read engine setup and Recalbox deployment:
+- `/Users/tobiaslaurent/workspace/game/godot/README.md`
+
+## Prototype (Pygame)
+Quick local run:
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+python3 scripts/generate_assets.py
 python3 game.py
 ```
 
-To launch straight into fullscreen:
-```bash
-python3 game.py --fullscreen
-```
-
-## Raspberry Pi Setup
-On Raspberry Pi OS:
-
-```bash
-sudo apt update
-sudo apt install -y python3-pygame
-python3 game.py --fullscreen
-```
-
-If you prefer virtual environments on Pi, use the same local setup commands above.
-
-## Next Ideas
-- Add sprite assets and tile map levels
-- Add lives, power-ups, and sound effects
-- Export to RetroPie Ports menu for one-click launch
+## Current Theme
+- Player: Bavarian festival visitor
+- Collectibles: beer + pretzels
+- Enemies: waiters + police
+- Attack: throwable beer mug

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_0r2vl"]
+[ext_resource type="Texture2D" path="res://assets/generated/waiter.png" id="2_f7wsi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83i2v"]
+size = Vector2(36, 56)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_0r2vl")
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_83i2v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("2_f7wsi")

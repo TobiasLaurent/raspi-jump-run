@@ -1,0 +1,80 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_835r6"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_835r6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(480, 270)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+
+[node name="Level" type="Node2D" parent="."]
+
+[node name="Entities" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+offset_left = 18.0
+offset_top = 14.0
+theme_override_font_sizes/font_size = 26
+text = "Score 0"
+
+[node name="StatsLabel" type="Label" parent="CanvasLayer"]
+offset_left = 18.0
+offset_top = 46.0
+theme_override_font_sizes/font_size = 18
+text = "Beer 0/8  Pretzels 0  Lives 3"
+
+[node name="MessageLabel" type="Label" parent="CanvasLayer"]
+offset_left = 240.0
+offset_top = 18.0
+offset_right = 920.0
+offset_bottom = 60.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 20
+text = ""
+
+[node name="HintLabel" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 512.0
+offset_right = 950.0
+offset_bottom = 536.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 15
+text = "Move A/D or arrows | Jump Space | Throw J/C/Enter | F11 Fullscreen | Esc Quit"
+
+[node name="OverlayPanel" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0, 0, 0, 0.55)
+
+[node name="OverlayTitle" type="Label" parent="CanvasLayer/OverlayPanel"]
+offset_left = 180.0
+offset_top = 185.0
+offset_right = 780.0
+offset_bottom = 250.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 48
+text = "Bavarian Mug Run"
+
+[node name="OverlaySubtitle" type="Label" parent="CanvasLayer/OverlayPanel"]
+offset_left = 120.0
+offset_top = 262.0
+offset_right = 840.0
+offset_bottom = 312.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 22
+text = ""
+
+[node name="OverlayPrompt" type="Label" parent="CanvasLayer/OverlayPanel"]
+offset_left = 190.0
+offset_top = 320.0
+offset_right = 770.0
+offset_bottom = 360.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 20
+text = "Press Space or A to restart"
